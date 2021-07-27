@@ -1,0 +1,8 @@
+rule gs
+    command = gs -q $
+        -dBATCH -dNOPAUSE $
+        -sDEVICE=pdfwrite $
+        -sPAPERSIZE=a4 -dFIXMEDIA -dEPSFitPage -dNoOutputFonts $
+        -sOutputFile="$out" -f $in
+
+build hello.pdf: gs hello.eps

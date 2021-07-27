@@ -1,0 +1,20 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Title: PostScript example
+
+/triangle {
+    100 100 moveto
+    400 0 rlineto
+    -200 400 rlineto
+    closepath
+} def
+
+0.69 0.11 0.63 setrgbcolor
+triangle fill
+
+5 setlinewidth
+0 0 0 setrgbcolor
+triangle stroke
+
+100 600 moveto
+/Source-Code-Pro 25 selectfont
+(Hello, PostScript!) show
